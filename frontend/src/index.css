@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: #efece3;
+  color: #191713;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+/* Links — accent with a thin underline that turns ink on hover */
+a {
+  color: #b3341f;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(179, 52, 31, 0.4);
+  cursor: pointer;
+}
+a:hover {
+  color: #191713;
+  border-bottom-color: #191713;
+}
+
+::selection {
+  background: rgba(179, 52, 31, 0.18);
+}
+
+/* Inputs — transparent, bottom-border only, accent on focus */
+input {
+  transition: border-color 0.2s ease;
+}
+input:focus {
+  border-bottom-color: #b3341f !important;
+  outline: none;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
